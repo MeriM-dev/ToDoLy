@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f78bc3b3-47d8-429f-9fe9-1e5f94b97476" name="Default Changelist" comment="Return to main menu&#10;&#10;Updated the Task class definition.&#10;Split the code in Main class for showing the menu options and handling &#10;user input into 2 methods showMenu and userAction. The first one displays&#10;the menu and waits for user input. The second one triggers a flow based&#10;on the user choice and then brings back the menu options if applicable.">
+      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/Task.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="hideWarnings" value="true" />
+    <option name="HIDE_WARNINGS" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Rw8zvSmamsrkHxLmC0ISSvnR5n" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.meri.todoly.Main" />
+      <module name="ToDoLy" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f78bc3b3-47d8-429f-9fe9-1e5f94b97476" name="Default Changelist" comment="" />
+      <created>1570567063809</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570567063809</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Return to main menu&#10;&#10;Updated the Task class definition.&#10;Split the code in Main class for showing the menu options and handling &#10;user input into 2 methods showMenu and userAction. The first one displays&#10;the menu and waits for user input. The second one triggers a flow based&#10;on the user choice and then brings back the menu options if applicable." />
+    <option name="LAST_COMMIT_MESSAGE" value="Return to main menu&#10;&#10;Updated the Task class definition.&#10;Split the code in Main class for showing the menu options and handling &#10;user input into 2 methods showMenu and userAction. The first one displays&#10;the menu and waits for user input. The second one triggers a flow based&#10;on the user choice and then brings back the menu options if applicable." />
+  </component>
+</project>

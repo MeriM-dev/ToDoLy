@@ -1,16 +1,22 @@
 package com.meri.todoly;
 
-public class Task {
-    private String name;
-    private String date;
-    private String projectName;
-    private String status;
+import java.util.Date;
 
-    public Task(String name, String date, String projectName){
+class Task {
+    enum Status {
+        inProgress, done
+    }
+
+    private String name;
+    private Date date;
+    private String projectName;
+    private Status status;
+
+    Task(String name, Date date, String projectName) {
         this.name = name;
         this.date = date;
         this.projectName = projectName;
-        this.status = "To do";
+        this.status = Status.inProgress;
 
     }
 }
