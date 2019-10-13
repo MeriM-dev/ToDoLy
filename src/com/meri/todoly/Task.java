@@ -4,7 +4,17 @@ import java.util.Date;
 
 class Task {
     enum Status {
-        inProgress, done
+        inProgress, done;
+
+        public String details() {
+            switch (this) {
+                case inProgress:
+                    return "In progress";
+                case done:
+                    return "Done";
+            }
+            return "";
+        }
     }
 
     private String name;
@@ -17,6 +27,9 @@ class Task {
         this.date = date;
         this.projectName = projectName;
         this.status = Status.inProgress;
+    }
 
+    public String details() {
+        return name + " | " + date.toString() + " | " + projectName + " | " + status.details();
     }
 }

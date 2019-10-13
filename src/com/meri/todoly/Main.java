@@ -16,7 +16,11 @@ public class Main {
     }
 
     private static void showMenu() {
-        System.out.println("Choose option: 1) Show 2) Add 3) Edit 4) Save and Quit");
+        System.out.println("Choose an option:");
+        System.out.println("1) Show");
+        System.out.println("2) Add");
+        System.out.println("3) Edit");
+        System.out.println("4) Save and Quit");
 
         Scanner userInput = new Scanner(System.in);
         while (!userInput.hasNextInt()) {
@@ -30,7 +34,7 @@ public class Main {
 
     private static void userAction(int optionNumber) {
         if (optionNumber == 1) {
-            System.out.println(">> Not implemented 1");
+            showAllTasks();
             showMenu();
         } else if (optionNumber == 2) {
             addNewTask();
@@ -45,7 +49,12 @@ public class Main {
             showMenu();
         }
     }
-
+    private static void showAllTasks() {
+        for (Task task: taskList) {
+            System.out.println(task.details());
+        }
+        System.out.println("\n");
+    }
     private static void addNewTask() {
         Scanner userInput = new Scanner(System.in);
 
@@ -62,10 +71,15 @@ public class Main {
         try {
             date = dateFormat.parse(dateString);
             System.out.println(date);
-
         } catch (ParseException e) {
             System.out.println("Please enter a valid date");
-            return;
+            try {
+                date = dateFormat.parse(dateString);
+                System.out.println(date);
+            } catch (ParseException e1) {
+                System.out.println("Invalid date");
+                return;
+            }
         }
 
 
