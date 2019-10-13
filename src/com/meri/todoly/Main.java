@@ -1,5 +1,8 @@
 package com.meri.todoly;
 
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.text.SimpleDateFormat;
@@ -7,10 +10,12 @@ import java.util.Date;
 import java.text.ParseException;
 
 public class Main {
+    private static final String FILE_NAME = "TaskList.dat";
     private static ArrayList<Task> taskList = new ArrayList<>();
 
     public static void main(String[] args) {
         System.out.println(">> Welcome to ToDoLy");
+        loadFromFile();
         showMenu();
         System.out.println("Task List " + taskList.size());
     }
@@ -43,6 +48,7 @@ public class Main {
             System.out.println(">> Not implemented 3");
             showMenu();
         } else if (optionNumber == 4) {
+            saveToFile();
             System.out.println(">> Thank you. Next!");
         } else {
             System.out.println(">> Invalid option");
@@ -89,5 +95,34 @@ public class Main {
         Task task = new Task(name, date, projectName);
         taskList.add(task);
 
+    }
+    public static void saveToFile() {
+        Path destination = Paths.get(FILE_NAME).toAbsolutePath();
+        try {
+            ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(destination.toString()));
+            os.writeObject(taskList);
+            os.close();
+        }
+        catch (IOException exc) {
+            System.err.println("Error saving to file" );
+            exc.printStackTrace();
+        }
+    }
+
+    public static void loadFromFile() {
+        Path destination = Paths.get(FILE_NAME).toAbsolutePath();
+        try {
+            File file = destination.toFile();
+            if (file.exists())
+            {
+                ObjectInputStream is = new ObjectInputStream(new FileInputStream(file));
+                taskList = (ArrayList<Task>)is.readObject();
+                is.close();
+            }
+        }
+        catch (Exception e) {
+            System.err.println("Error when loading file");
+            e.printStackTrace();
+        }
     }
 }

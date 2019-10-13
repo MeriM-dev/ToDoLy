@@ -1,8 +1,9 @@
 package com.meri.todoly;
 
+import java.io.Serializable;
 import java.util.Date;
 
-class Task {
+class Task implements Serializable {
     enum Status {
         inProgress, done;
 
