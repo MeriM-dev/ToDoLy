@@ -4,6 +4,7 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,11 +17,11 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(">> Welcome to ToDoLy");
         loadFromFile();
-        showMenu();
+        displayMainMenu();
         System.out.println("Task List " + taskList.size());
     }
 
-    private static void showMenu() {
+    private static void displayMainMenu() {
         System.out.println("Choose an option:");
         System.out.println("1) Show");
         System.out.println("2) Add");
@@ -34,29 +35,57 @@ public class Main {
         }
 
         int optionNumber = userInput.nextInt();
-        userAction(optionNumber);
+        mainMenuAction(optionNumber);
+    }
+    private static void displayShowMenu() {
+        System.out.println("Order by:");
+        System.out.println("1) Date");
+        System.out.println("2) Project Name");
+        System.out.println("3) Return to main menu");
+
+        Scanner userInput = new Scanner(System.in);
+        while (!userInput.hasNextInt()) {
+            System.out.println(">> Enter a number");
+            userInput.next();
+        }
+        int optionNumber = userInput.nextInt();
+        showMenuAction(optionNumber);
     }
 
-    private static void userAction(int optionNumber) {
+    private static void mainMenuAction(int optionNumber) {
         if (optionNumber == 1) {
-            showAllTasks();
-            showMenu();
+            displayShowMenu();
         } else if (optionNumber == 2) {
             addNewTask();
-            showMenu();
+            displayMainMenu();
         } else if (optionNumber == 3) {
             System.out.println(">> Not implemented 3");
-            showMenu();
+            displayMainMenu();
         } else if (optionNumber == 4) {
             saveToFile();
             System.out.println(">> Thank you. Next!");
         } else {
             System.out.println(">> Invalid option");
-            showMenu();
+            displayMainMenu();
         }
     }
-    private static void showAllTasks() {
-        for (Task task: taskList) {
+    private static void showMenuAction(int optionNumber) {
+        ArrayList<Task> list = taskList;
+        if (optionNumber == 1) {
+            Comparator<Task> comparator = (t1,t2) -> t1.date.compareTo(t2.date);
+            list.sort(comparator);
+        } else if (optionNumber == 2) {
+            Comparator<Task> comparator = (t1,t2) -> t1.projectName.compareTo(t2.projectName);
+            list.sort(comparator);
+        } else if (optionNumber == 3) {
+            displayMainMenu();
+            return;
+        } else {
+            System.out.println(">> Invalid option");
+            displayMainMenu();
+            return;
+        }
+        for (Task task: list) {
             System.out.println(task.details());
         }
         System.out.println("\n");

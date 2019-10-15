@@ -19,8 +19,8 @@ class Task implements Serializable {
     }
 
     private String name;
-    private Date date;
-    private String projectName;
+    public Date date;
+    public String projectName;
     private Status status;
 
     Task(String name, Date date, String projectName) {
