@@ -49,6 +49,18 @@ public class Main {
             System.out.println("Couldn't find task: " + name);
         }
     }
+    private static void markAsDone() {
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Please enter existing name");
+        String name = userInput.nextLine();
+        int taskIndex = findTask(name);
+        if (taskIndex >= 0) {
+            taskList.get(taskIndex).setStatus(Task.Status.done);
+            System.out.println("Done");
+        } else {
+            System.out.println("Couldn't find task: " + name);
+        }
+    }
 
     private static int findTask(String taskName) {
         for (int i = 0; i < taskList.size(); i++) {
@@ -115,7 +127,7 @@ public class Main {
         else if (optionNumber == 2) {
             removeTask();
         } else if (optionNumber == 3) {
-            System.out.println(">> Not implemented 3");
+            markAsDone();
         }
         else if (optionNumber == 4) {
             return;
