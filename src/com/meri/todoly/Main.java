@@ -61,6 +61,25 @@ public class Main {
             System.out.println("Couldn't find task: " + name);
         }
     }
+    private static void updateTask() {
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Please enter existing name");
+        String name = userInput.nextLine();
+        int taskIndex = findTask(name);
+        if (taskIndex >= 0) {
+            updateName(taskList.get(taskIndex));
+
+            System.out.println("Updated");
+        } else {
+            System.out.println("Couldn't find task: " + name);
+        }
+    }
+    private static void updateName(Task task) {
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Please enter new name");
+        String name = userInput.nextLine();
+        task.setName(name);
+    }
 
     private static int findTask(String taskName) {
         for (int i = 0; i < taskList.size(); i++) {
@@ -88,7 +107,7 @@ public class Main {
     }
     private static void displayEditMenu() {
         System.out.println("Choose an option:");
-        System.out.println("1) Edit");
+        System.out.println("1) Update");
         System.out.println("2) Remove");
         System.out.println("3) Mark as done");
         System.out.println("4) Return to main menu");
@@ -122,7 +141,7 @@ public class Main {
     }
     private static void editMenuAction(int optionNumber) {
         if (optionNumber == 1) {
-            System.out.println(">> Not implemented 1");
+           updateTask();
         }
         else if (optionNumber == 2) {
             removeTask();
