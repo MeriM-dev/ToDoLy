@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f78bc3b3-47d8-429f-9fe9-1e5f94b97476" name="Default Changelist" comment="Add Save on quit&#10;&#10;All changes are saved before the app quits.">
+    <list default="true" id="f78bc3b3-47d8-429f-9fe9-1e5f94b97476" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/Task.java" afterDir="false" />
@@ -29,6 +30,10 @@
   <component name="ProjectId" id="1Rw8zvSmamsrkHxLmC0ISSvnR5n" />
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -84,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570996719108</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add Show by date or project name&#10;&#10;Being able to list the saved project by date or project name">
+      <created>1571128344895</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571128344895</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,6 +115,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Return to main menu&#10;&#10;Updated the Task class definition.&#10;Split the code in Main class for showing the menu options and handling &#10;user input into 2 methods showMenu and userAction. The first one displays&#10;the menu and waits for user input. The second one triggers a flow based&#10;on the user choice and then brings back the menu options if applicable." />
     <MESSAGE value="Add Save on quit&#10;&#10;All changes are saved before the app quits." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Save on quit&#10;&#10;All changes are saved before the app quits." />
+    <MESSAGE value="Add Show by date or project name&#10;&#10;Being able to list the saved project by date or project name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Show by date or project name&#10;&#10;Being able to list the saved project by date or project name" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ToDoLy$Main.ic" NAME="Main Coverage Results" MODIFIED="1571315347889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

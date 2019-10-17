@@ -4,6 +4,38 @@ import java.io.Serializable;
 import java.util.Date;
 
 class Task implements Serializable {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     enum Status {
         inProgress, done;
 
@@ -19,8 +51,8 @@ class Task implements Serializable {
     }
 
     private String name;
-    public Date date;
-    public String projectName;
+    private Date date;
+    private String projectName;
     private Status status;
 
     Task(String name, Date date, String projectName) {
