@@ -3,7 +3,7 @@ package com.meri.todoly;
 import java.io.Serializable;
 import java.util.Date;
 
-class Task implements Serializable {
+public class Task implements Serializable {
     public String getName() {
         return name;
     }
