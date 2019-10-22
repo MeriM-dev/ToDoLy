@@ -1,21 +1,16 @@
 package com.meri.todoly;
 
 import com.meri.todoly.core.Storage;
-
-import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import com.meri.todoly.core.UserInput;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.Scanner;
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.text.ParseException;
 
 public class Main {
     private static final String FILE_NAME = "TaskList.dat";
     private static Storage storage = new Storage(FILE_NAME);
     private static ArrayList<Task> taskList = new ArrayList<>();
+    private static UserInput userInput = new UserInput();
 
     public static void main(String[] args) {
         System.out.println(">> Welcome to ToDoLy <<");
@@ -31,19 +26,12 @@ public class Main {
         System.out.println("3) Edit");
         System.out.println("4) Save and Quit");
 
-        Scanner userInput = new Scanner(System.in);
-        while (!userInput.hasNextInt()) {
-            System.out.println(">> Enter a number");
-            userInput.next();
-        }
-        int optionNumber = userInput.nextInt();
-        mainMenuAction(optionNumber);
+        mainMenuAction(userInput.waitForInt());
     }
 
     private static void removeTask() {
-        Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter existing name");
-        String name = userInput.nextLine();
+        String name = userInput.waitForString();
         int taskIndex = findTask(name);
         if (taskIndex >= 0) {
             taskList.remove(taskIndex);
@@ -53,9 +41,8 @@ public class Main {
         }
     }
     private static void markAsDone() {
-        Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter existing name");
-        String name = userInput.nextLine();
+        String name = userInput.waitForString();
         int taskIndex = findTask(name);
         if (taskIndex >= 0) {
             taskList.get(taskIndex).setStatus(Task.Status.done);
@@ -65,9 +52,8 @@ public class Main {
         }
     }
     private static void updateTask() {
-        Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter existing name");
-        String name = userInput.nextLine();
+        String name = userInput.waitForString();
         int taskIndex = findTask(name);
         if (taskIndex >= 0) {
             updateName(taskList.get(taskIndex));
@@ -78,9 +64,8 @@ public class Main {
         }
     }
     private static void updateName(Task task) {
-        Scanner userInput = new Scanner(System.in);
         System.out.println("Please enter new name");
-        String name = userInput.nextLine();
+        String name = userInput.waitForString();
         task.setName(name);
     }
 
@@ -100,13 +85,7 @@ public class Main {
         System.out.println("2) Project Name");
         System.out.println("3) Return to main menu");
 
-        Scanner userInput = new Scanner(System.in);
-        while (!userInput.hasNextInt()) {
-            System.out.println(">> Enter a number");
-            userInput.next();
-        }
-        int optionNumber = userInput.nextInt();
-        showMenuAction(optionNumber);
+        showMenuAction(userInput.waitForInt());
     }
     private static void displayEditMenu() {
         System.out.println("Choose an option:");
@@ -115,13 +94,7 @@ public class Main {
         System.out.println("3) Mark as done");
         System.out.println("4) Return to main menu");
 
-        Scanner userInput = new Scanner(System.in);
-        while (!userInput.hasNextInt()) {
-            System.out.println(">> Enter a number");
-            userInput.next();
-        }
-        int optionNumber = userInput.nextInt();
-        editMenuAction(optionNumber);
+        editMenuAction(userInput.waitForInt());
     }
 
     private static void mainMenuAction(int optionNumber) {
@@ -180,38 +153,16 @@ public class Main {
     }
 
     private static void addNewTask() {
-        Scanner userInput = new Scanner(System.in);
-
         System.out.println("Please enter name");
-        String name = userInput.nextLine();
+        String name = userInput.waitForString();
 
         System.out.println("Please enter date in the following format (yyyy-MM-dd)");
-        String dateString = userInput.nextLine();
-
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
-        Date date;
-
-        try {
-            date = dateFormat.parse(dateString);
-            System.out.println(date);
-        } catch (ParseException e) {
-            System.out.println("Please enter a valid date");
-            try {
-                date = dateFormat.parse(dateString);
-                System.out.println(date);
-            } catch (ParseException e1) {
-                System.out.println("Invalid date");
-                return;
-            }
-        }
-
+        Date date = userInput.waitForDate("yyyy-MM-dd");
 
         System.out.println("Please enter project name");
-        String projectName = userInput.nextLine();
+        String projectName = userInput.waitForString();
 
         Task task = new Task(name, date, projectName);
         taskList.add(task);
-
     }
 }
