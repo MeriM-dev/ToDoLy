@@ -1,22 +1,18 @@
 package com.meri.todoly;
 
-import com.meri.todoly.core.Storage;
+import com.meri.todoly.core.Task;
+import com.meri.todoly.core.TaskManager;
 import com.meri.todoly.core.UserInput;
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Date;
 
 public class Main {
     private static final String FILE_NAME = "TaskList.dat";
-    private static Storage storage = new Storage(FILE_NAME);
-    private static ArrayList<Task> taskList = new ArrayList<>();
+    private static TaskManager taskManager = new TaskManager(FILE_NAME);
     private static UserInput userInput = new UserInput();
 
     public static void main(String[] args) {
         System.out.println(">> Welcome to ToDoLy <<");
-        taskList = storage.load();
         displayMainMenu();
-        System.out.println("Task List " + taskList.size());
     }
 
     private static void displayMainMenu() {
@@ -27,56 +23,6 @@ public class Main {
         System.out.println("4) Save and Quit");
 
         mainMenuAction(userInput.waitForInt());
-    }
-
-    private static void removeTask() {
-        System.out.println("Please enter existing name");
-        String name = userInput.waitForString();
-        int taskIndex = findTask(name);
-        if (taskIndex >= 0) {
-            taskList.remove(taskIndex);
-            System.out.println("Task deleted");
-        } else {
-            System.out.println("Couldn't find task: " + name);
-        }
-    }
-    private static void markAsDone() {
-        System.out.println("Please enter existing name");
-        String name = userInput.waitForString();
-        int taskIndex = findTask(name);
-        if (taskIndex >= 0) {
-            taskList.get(taskIndex).setStatus(Task.Status.done);
-            System.out.println("Done");
-        } else {
-            System.out.println("Couldn't find task: " + name);
-        }
-    }
-    private static void updateTask() {
-        System.out.println("Please enter existing name");
-        String name = userInput.waitForString();
-        int taskIndex = findTask(name);
-        if (taskIndex >= 0) {
-            updateName(taskList.get(taskIndex));
-
-            System.out.println("Updated");
-        } else {
-            System.out.println("Couldn't find task: " + name);
-        }
-    }
-    private static void updateName(Task task) {
-        System.out.println("Please enter new name");
-        String name = userInput.waitForString();
-        task.setName(name);
-    }
-
-    private static int findTask(String taskName) {
-        for (int i = 0; i < taskList.size(); i++) {
-            Task task = taskList.get(i);
-            if (task.getName().equals(taskName)) {
-                return i;
-            }
-        }
-        return -1;
     }
 
     private static void displayShowMenu() {
@@ -102,13 +48,13 @@ public class Main {
             displayShowMenu();
             displayMainMenu();
         } else if (optionNumber == 2) {
-            addNewTask();
+            taskManager.addNewTask();
             displayMainMenu();
         } else if (optionNumber == 3) {
             displayEditMenu();
             displayMainMenu();
         } else if (optionNumber == 4) {
-            storage.save(taskList);
+            taskManager.saveTaskList();
             System.out.println(">> Thank you. Next!");
         } else {
             System.out.println(">> Invalid option");
@@ -117,12 +63,12 @@ public class Main {
     }
     private static void editMenuAction(int optionNumber) {
         if (optionNumber == 1) {
-           updateTask();
+            taskManager.updateTask();
         }
         else if (optionNumber == 2) {
-            removeTask();
+            taskManager.removeTask();
         } else if (optionNumber == 3) {
-            markAsDone();
+            taskManager.markAsDone();
         }
         else if (optionNumber == 4) {
             return;
@@ -133,13 +79,11 @@ public class Main {
     }
 
     private static void showMenuAction(int optionNumber) {
-        ArrayList<Task> list = taskList;
+        ArrayList<Task> list;
         if (optionNumber == 1) {
-            Comparator<Task> comparator = (t1, t2) -> t1.getDate().compareTo(t2.getDate());
-            list.sort(comparator);
+            list = taskManager.sortedByDate();
         } else if (optionNumber == 2) {
-            Comparator<Task> comparator = (t1, t2) -> t1.getProjectName().compareTo(t2.getProjectName());
-            list.sort(comparator);
+            list = taskManager.sortedByProject();
         } else if (optionNumber == 3) {
             return;
         } else {
@@ -150,19 +94,5 @@ public class Main {
             System.out.println(task.details());
         }
         System.out.println("\n");
-    }
-
-    private static void addNewTask() {
-        System.out.println("Please enter name");
-        String name = userInput.waitForString();
-
-        System.out.println("Please enter date in the following format (yyyy-MM-dd)");
-        Date date = userInput.waitForDate("yyyy-MM-dd");
-
-        System.out.println("Please enter project name");
-        String projectName = userInput.waitForString();
-
-        Task task = new Task(name, date, projectName);
-        taskList.add(task);
     }
 }

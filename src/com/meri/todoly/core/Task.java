@@ -1,4 +1,4 @@
-package com.meri.todoly;
+package com.meri.todoly.core;
 
 import java.io.Serializable;
 import java.util.Date;

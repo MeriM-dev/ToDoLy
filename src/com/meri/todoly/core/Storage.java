@@ -1,7 +1,5 @@
 package com.meri.todoly.core;
 
-import com.meri.todoly.Task;
-
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
