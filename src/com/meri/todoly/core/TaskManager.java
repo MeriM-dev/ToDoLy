@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 
+/**
+ * This class contains and maintains the list with arbitrary number of tasks
+ * and provides all the necessary methods to operate on the tasks.
+ */
 public class TaskManager {
     private Storage storage;
     private ArrayList<Task> taskList = new ArrayList<>();

@@ -5,9 +5,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+/**
+ * This class stores and loads already stored user tasks
+ */
 public class Storage {
     private String fileName;
 
+    /**
+     * Constructs a Storage object that will operate with the given file name
+     * @param fileName the file that will be used to store or read user tasks
+     */
     public Storage(String fileName){
         this.fileName = fileName;
     }
