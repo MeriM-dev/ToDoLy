@@ -5,6 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/core/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/core/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/core/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/core/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/TaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/core/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/UserInput.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
