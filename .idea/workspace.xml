@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f78bc3b3-47d8-429f-9fe9-1e5f94b97476" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/StorageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/TaskManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/TaskTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/core/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/core/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/core/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/core/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/TaskManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/meri/todoly/core/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/UserInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoLy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoLy.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -32,15 +31,28 @@
   </component>
   <component name="ProjectId" id="1Rw8zvSmamsrkHxLmC0ISSvnR5n" />
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.meri.todoly.core" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.meri.todoly.core" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -55,7 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.StorageTest.save">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.meri.todoly.Main" />
       <module name="ToDoLy" />
@@ -66,8 +78,93 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StorageTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ToDoLy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.meri.todoly.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.meri.todoly.core" />
+      <option name="MAIN_CLASS_NAME" value="com.meri.todoly.core.StorageTest" />
+      <option name="METHOD_NAME" value="save" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskManagerTest.updateName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ToDoLy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.meri.todoly.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.meri.todoly.core" />
+      <option name="MAIN_CLASS_NAME" value="com.meri.todoly.core.TaskManagerTest" />
+      <option name="METHOD_NAME" value="updateName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="ToDoLy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.meri.todoly.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.meri.todoly.core" />
+      <option name="MAIN_CLASS_NAME" value="com.meri.todoly.core.TaskTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskTest.details" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ToDoLy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.meri.todoly.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.meri.todoly.core" />
+      <option name="MAIN_CLASS_NAME" value="com.meri.todoly.core.TaskTest" />
+      <option name="METHOD_NAME" value="details" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskTest.setStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ToDoLy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.meri.todoly.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.meri.todoly.core" />
+      <option name="MAIN_CLASS_NAME" value="com.meri.todoly.core.TaskTest" />
+      <option name="METHOD_NAME" value="setStatus" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StorageTest.save" />
+        <item itemvalue="JUnit.TaskManagerTest.updateName" />
+        <item itemvalue="JUnit.TaskTest.details" />
+        <item itemvalue="JUnit.TaskTest.setStatus" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
