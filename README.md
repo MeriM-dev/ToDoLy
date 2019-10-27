@@ -1,6 +1,6 @@
 # ToDoLy
 
-ToDoly is a todo list application written in Java that uses a text based user interface. Class Diagram
+ToDoly is a todo list application written in Java that uses a text based user interface. (Class Diagram)[docs/ToDoLy-class-diagram.pdf]
 
 ### Prerequisites ###
 Java version 12+

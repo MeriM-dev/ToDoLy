@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f78bc3b3-47d8-429f-9fe9-1e5f94b97476" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/StorageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/TaskManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/meri/todoly/core/TaskTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDoLy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoLy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ToDoLy-class-diagram.pdf" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
